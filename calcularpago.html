@@ -1,0 +1,34 @@
+<html>
+<head>
+
+<script>
+
+	function pagar(){
+		var valor2 = parseInt(document.f1.caja2.value);
+		var valor3 = parseInt(document.f1.caja3.value);
+		var result = valor2 * valor3;
+		var result2= result * 1.16;
+		document.f2.res.value= '$'+ result2;
+		
+	}
+
+</script>
+
+</head>
+<body>
+
+<br><br>
+<form name="f1">
+	Poducto:<input type="text" name="caja1" size="15"><br><br>
+	Precio U:<input type="text" name="caja2" size="10"><br><br>
+	Cant.:<input type="text" name="caja3" size="4"><br><br>
+</form>
+
+<button onclick="pagar();">Calcular Pago</button><br><br>
+
+<form name="f2">
+El total a pagar es:<input type="text" name="res" size="20"> IVA incluido(16%)<br><br>
+</form>
+
+</body>
+</html>
