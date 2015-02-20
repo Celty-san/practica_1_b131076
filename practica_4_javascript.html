@@ -1,0 +1,76 @@
+<html>
+<head>
+
+<script>
+
+	function Calcular(){
+	//alert('si');
+		opc=parseInt(document.f1.Operacion.value);
+		switch(opc){
+		case 1: Suma(); break;
+		case 2: Resta(); break;
+		case 3: Division(); break;
+		case 4: Multiplicacion(); break;
+		}	
+			return;
+	}
+	
+	function Suma(){
+		var valor1 = parseInt(document.f1.caja1.value);
+		var valor2 = parseInt(document.f1.caja2.value);
+		var result = valor1 + valor2;
+		document.f2.res.value=result;
+	}
+	
+	function Resta(){
+		var valor1 = parseInt(document.f1.caja1.value);
+		var valor2 = parseInt(document.f1.caja2.value);
+		var result = valor1 - valor2;
+		document.f2.res.value=result;	
+	}
+	
+	function Multiplicacion(){
+		var valor1 = parseInt(document.f1.caja1.value);
+		var valor2 = parseInt(document.f1.caja2.value);
+		var result = valor1 * valor2;
+		document.f2.res.value=result;	
+	}
+	
+	function Division(){
+		var valor1 = parseInt(document.f1.caja1.value);
+		var valor2 = parseInt(document.f1.caja2.value);
+		var result = valor1 / valor2;
+		document.f2.res.value=result;	
+	}
+	
+</script>
+
+</head>
+<body>
+
+<form name="f1">
+	<fieldset>
+	<legend>OPERACIONES</legend>
+	N1:<input type="text" name="caja1" size="15"><br><br>
+	N2:<input type="text" name="caja2" size="15"><br><br>
+	Operacion:<select name="Operacion">
+					<option value="1">Suma</option>
+					<option value="2">Resta</option>
+					<option value="3">Division</option>
+					<option value="4">Multiplicacion</option>
+					</select>
+	<br><br>
+		</form>
+	<a href="javascript:Calcular();">Calcular</a><br><br>
+	</fieldset>
+
+
+<form name="f2" >
+	<fieldset>
+	<legend>RESULTADO</legend>
+		Resultado:<input type="text" name="res" size="15"><br><br>					
+	</fieldset>
+</form>
+
+</body>
+</html>
